@@ -1,0 +1,119 @@
+<!-- This is GUI for Heart disease Detection Application Using DeepLearning  -->
+
+<!DOCTYPE html>
+<html >
+<head>
+  <meta charset="UTF-8">
+  <title>HEART PREDICTION MACHINE LEARNING</title>
+
+  <style>
+    /* CSS code for button */
+    body {
+      /background-image: url('C:/Users/user/Documents/4.2/KBS/flask/staticproject.png');
+      background-repeat: no-repeat;
+      background-attachment: fixed;
+      background-size: cover;
+    }
+
+    /* CSS code for button */
+    .button_css {
+    color: #494949 !important;
+    text-transform: uppercase;
+    text-decoration: none;
+    background: #ffffff;
+    padding: 20px;
+    border: 4px solid #494949 !important;
+    display: inline-block;
+    transition: all 0.4s ease 0s;
+    }
+    
+    .button_css:hover {
+    color: #ffffff !important;
+    background: #f6b93b;
+    border-color: #f6b93b !important;
+    transition: all 0.4s ease 0s;
+    }
+  </style>
+
+</head>
+
+<body>
+
+ 
+ 
+ <div class="login">
+  
+    <!-- Get input for predict the  heart disease -->
+    <center>
+         <br>
+            <br>
+               <br>
+                  <br>
+    <form action="{/prediction}"method="GET">
+       
+          <br>
+            <br>
+              <br>
+                <br>
+                  <br>
+                    <br>
+                      <br>
+                        <br>
+                          <br>
+                           <br>
+                       
+                                        
+                                    
+
+        <h1>Please kindly Enter all of the folowing  values of your heart features Below</h1>
+        
+      <input type="text" name="age" placeholder="enter age" required="required" />
+       <input type="text" name="resting_blood_pressure" placeholder="enter resting_blood_pressure" required="required" />
+       <input type="text" name="cholesterol" placeholder="enter cholesterol" required="required" />
+        <input type="text" name="fasting_blood_sugar" placeholder="enter fasting_blood_sugar" required="required" />
+        <input type="text" name="max_heart_rate_achieved" placeholder="enter max_heart_rate_achieved" required="required" />
+
+       
+    
+       
+            
+    
+        
+
+    <br>
+    <input type="text" name=" exercise_induced_angina" placeholder=" enter exercise_induced_angina" required="required" />
+    <input type="text" name="st_depression" placeholder="enter st_depression" required="required" />
+     <input type="text" name="sex" placeholder="enter sex" required="required" />
+     <input type="text" name="chest_pain_type_angina" placeholder="enter chest_pain_type_angina" required="required" />
+     <input type="text" name="chest_pain_type_non_angina" placeholder="enter chest_pain_type_non_angina" required="required" />
+
+     <br>
+     <input type="text" name="chest_pain_type_typical_agina" placeholder="chest_pain_type_typical_agina" required="required" />
+    <input type="text" name="rest_ecg" placeholder="enter rest_ecg" required="required" />
+     <input type="text" name="rest_ecg_normal" placeholder="enter rest_ecg normal" required="required" />
+      <input type="text" name="st_slope" placeholder=" enter st_slope_flat" required="required" />
+        <input type="text" name="enter st_slope__normal" placeholder="enter st_slope__normal" required="required" />
+  
+      <br>
+
+      
+        
+        <!-- Show button -->
+        
+            <button type="submit" class="btn btn-primary btn-block btn-large"><strong>Predict Heart disease</strong></button></a>
+        </div>
+        
+    </form>
+    </center>
+   
+   <!-- Show predicted output using ML model --> 
+   <div>
+       <center>
+   <h1>{{ prediction_text }}</h1>
+       </center>
+   </div>
+
+ </div>
+
+</body>
+</html>
